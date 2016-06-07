@@ -28,3 +28,7 @@ D:\projects\Sincronización\Sincronizacion\obj\Debug\Sincronizacion.exe.manifest
 D:\projects\Sincronización\Sincronizacion\obj\Debug\Sincronizacion.application
 D:\projects\Sincronizacion\Sincronizacion\bin\Debug\Sincronizacion.exe.config
 D:\projects\MAI\Sincronizacion\Sincronizacion\bin\Debug\Sincronizacion.exe.config
+C:\Proyectos\visual\Sincronizacion\bin\Debug\Sincronizacion.exe.config
+C:\Proyectos\visual\Sincronizacion\obj\Debug\Sincronizacion.csprojResolveAssemblyReference.cache
+C:\Proyectos\visual\Sincronizacion\obj\Debug\Sincronizacion.exe
+C:\Proyectos\visual\Sincronizacion\obj\Debug\Sincronizacion.pdb

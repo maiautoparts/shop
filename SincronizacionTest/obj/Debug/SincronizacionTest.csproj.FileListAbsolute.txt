@@ -18,3 +18,13 @@ D:\projects\Sincronización\SincronizacionTest\obj\Debug\SincronizacionTest.dll
 D:\projects\Sincronización\SincronizacionTest\obj\Debug\SincronizacionTest.pdb
 D:\projects\Sincronización\SincronizacionTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 D:\projects\Sincronización\SincronizacionTest\bin\Debug\es\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Proyectos\visual\SincronizacionTest\bin\Debug\SincronizacionTest.dll
+C:\Proyectos\visual\SincronizacionTest\bin\Debug\SincronizacionTest.pdb
+C:\Proyectos\visual\SincronizacionTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Proyectos\visual\SincronizacionTest\bin\Debug\Sincronización.dll
+C:\Proyectos\visual\SincronizacionTest\bin\Debug\Objects.dll
+C:\Proyectos\visual\SincronizacionTest\bin\Debug\Sincronización.pdb
+C:\Proyectos\visual\SincronizacionTest\bin\Debug\Objects.pdb
+C:\Proyectos\visual\SincronizacionTest\obj\Debug\SincronizacionTest.csprojResolveAssemblyReference.cache
+C:\Proyectos\visual\SincronizacionTest\obj\Debug\SincronizacionTest.dll
+C:\Proyectos\visual\SincronizacionTest\obj\Debug\SincronizacionTest.pdb

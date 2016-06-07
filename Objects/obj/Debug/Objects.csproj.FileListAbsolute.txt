@@ -6,3 +6,8 @@ D:\projects\Sincronización\Objects\bin\Debug\Objects.dll
 D:\projects\Sincronización\Objects\bin\Debug\Objects.pdb
 D:\projects\Sincronización\Objects\obj\Debug\Objects.dll
 D:\projects\Sincronización\Objects\obj\Debug\Objects.pdb
+C:\Proyectos\visual\Objects\bin\Debug\Objects.dll
+C:\Proyectos\visual\Objects\bin\Debug\Objects.pdb
+C:\Proyectos\visual\Objects\obj\Debug\Objects.csprojResolveAssemblyReference.cache
+C:\Proyectos\visual\Objects\obj\Debug\Objects.dll
+C:\Proyectos\visual\Objects\obj\Debug\Objects.pdb

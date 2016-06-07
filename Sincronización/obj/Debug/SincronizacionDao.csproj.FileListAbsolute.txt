@@ -14,3 +14,11 @@ D:\projects\Sincronización\Sincronización\bin\Debug\Objects.pdb
 D:\projects\Sincronización\Sincronización\obj\Debug\SincronizacionDao.csprojResolveAssemblyReference.cache
 D:\projects\Sincronización\Sincronización\obj\Debug\Sincronización.dll
 D:\projects\Sincronización\Sincronización\obj\Debug\Sincronización.pdb
+C:\Proyectos\visual\Sincronización\bin\Debug\Sincronización.dll.config
+C:\Proyectos\visual\Sincronización\bin\Debug\Sincronización.dll
+C:\Proyectos\visual\Sincronización\bin\Debug\Sincronización.pdb
+C:\Proyectos\visual\Sincronización\bin\Debug\Objects.dll
+C:\Proyectos\visual\Sincronización\bin\Debug\Objects.pdb
+C:\Proyectos\visual\Sincronización\obj\Debug\SincronizacionDao.csprojResolveAssemblyReference.cache
+C:\Proyectos\visual\Sincronización\obj\Debug\Sincronización.dll
+C:\Proyectos\visual\Sincronización\obj\Debug\Sincronización.pdb
