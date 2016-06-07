@@ -1,0 +1,8 @@
+E:\projects\Sincronización\Objects\bin\Debug\Objects.dll
+E:\projects\Sincronización\Objects\bin\Debug\Objects.pdb
+E:\projects\Sincronización\Objects\obj\Debug\Objects.dll
+E:\projects\Sincronización\Objects\obj\Debug\Objects.pdb
+D:\projects\Sincronización\Objects\bin\Debug\Objects.dll
+D:\projects\Sincronización\Objects\bin\Debug\Objects.pdb
+D:\projects\Sincronización\Objects\obj\Debug\Objects.dll
+D:\projects\Sincronización\Objects\obj\Debug\Objects.pdb

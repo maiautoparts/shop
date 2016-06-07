@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://192.168.1.202:7047/InstanceName/WS/MAI AUTOPARTS%2C S.L./Page/ProductoTraduccion" filename="ProductoTraduccion.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

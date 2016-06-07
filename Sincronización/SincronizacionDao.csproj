@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F2DC8322-8973-4C3F-9CD7-18B38B1784B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sincronización</RootNamespace>
+    <AssemblyName>Sincronización</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base.cs" />
+    <Compile Include="Clientes.cs" />
+    <Compile Include="Pedidos.cs" />
+    <Compile Include="Productos.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web References\ClienteGrupoPrecios\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ClienteLista\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\FacturasLista\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PedidoFicha\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ProductoCaracteristicas\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ProductoFicha\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ProductoImagen\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ProductoLista\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ProductoTraduccion\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://192.168.1.202:7047/InstanceName/WS/MAI%2520AUTOPARTS%252C%2520S.L./Page/ClienteGrupoPrecios">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ClienteGrupoPrecios\</RelPath>
+      <UpdateFromURL>http://192.168.1.202:7047/InstanceName/WS/MAI%2520AUTOPARTS%252C%2520S.L./Page/ClienteGrupoPrecios</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Sincronización_ClienteGrupoPrecios_ClienteGrupoPrecios_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.1.202:7047/InstanceName/WS/MAI%2520AUTOPARTS%252C%2520S.L./Page/ClienteLista">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ClienteLista\</RelPath>
+      <UpdateFromURL>http://192.168.1.202:7047/InstanceName/WS/MAI%2520AUTOPARTS%252C%2520S.L./Page/ClienteLista</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Sincronización_ClienteLista_ClienteLista_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.1.202:7047/InstanceName/WS/MAI%2520AUTOPARTS%252C%2520S.L./Page/FacturasLista">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\FacturasLista\</RelPath>
+      <UpdateFromURL>http://192.168.1.202:7047/InstanceName/WS/MAI%2520AUTOPARTS%252C%2520S.L./Page/FacturasLista</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Sincronización_FacturasLista_FacturasLista_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.1.202:7047/InstanceName/WS/MAI%2520AUTOPARTS%252C%2520S.L./Page/PedidoFicha">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PedidoFicha\</RelPath>
+      <UpdateFromURL>http://192.168.1.202:7047/InstanceName/WS/MAI%2520AUTOPARTS%252C%2520S.L./Page/PedidoFicha</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Sincronización_PedidoFicha_PedidoFicha_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.1.202:7047/InstanceName/WS/MAI%2520AUTOPARTS%252C%2520S.L./Page/ProductoCaracteristica">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ProductoCaracteristicas\</RelPath>
+      <UpdateFromURL>http://192.168.1.202:7047/InstanceName/WS/MAI%2520AUTOPARTS%252C%2520S.L./Page/ProductoCaracteristica</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Sincronización_ProductoCaracteristicas_ProductoCaracteristica_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.1.202:7047/InstanceName/WS/MAI%2520AUTOPARTS%252C%2520S.L./Page/ProductoFicha">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ProductoFicha\</RelPath>
+      <UpdateFromURL>http://192.168.1.202:7047/InstanceName/WS/MAI%2520AUTOPARTS%252C%2520S.L./Page/ProductoFicha</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Sincronización_ProductoFicha_ProductoFicha_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.1.202:7047/InstanceName/WS/MAI%2520AUTOPARTS%252C%2520S.L./Page/ProductoImagen">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ProductoImagen\</RelPath>
+      <UpdateFromURL>http://192.168.1.202:7047/InstanceName/WS/MAI%2520AUTOPARTS%252C%2520S.L./Page/ProductoImagen</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Sincronización_ProductoImagen_ProductoImagen_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.1.202:7047/InstanceName/WS/MAI%2520AUTOPARTS%252C%2520S.L./Page/ProductoLista">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ProductoLista\</RelPath>
+      <UpdateFromURL>http://192.168.1.202:7047/InstanceName/WS/MAI%2520AUTOPARTS%252C%2520S.L./Page/ProductoLista</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Sincronización_ProductoLista_ProductoLista_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.1.202:7047/InstanceName/WS/MAI%2520AUTOPARTS%252C%2520S.L./Page/ProductoTraduccion">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ProductoTraduccion\</RelPath>
+      <UpdateFromURL>http://192.168.1.202:7047/InstanceName/WS/MAI%2520AUTOPARTS%252C%2520S.L./Page/ProductoTraduccion</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Sincronización_ProductoTraduccion_ProductoTraduccion_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ClienteGrupoPrecios\ClienteGrupoPrecios.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ClienteGrupoPrecios\ClienteGrupoPrecios.wsdl" />
+    <None Include="Web References\ClienteGrupoPrecios\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ClienteLista\ClienteLista.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ClienteLista\ClienteLista.wsdl" />
+    <None Include="Web References\ClienteLista\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\FacturasLista\FacturasLista.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\FacturasLista\FacturasLista.wsdl" />
+    <None Include="Web References\FacturasLista\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PedidoFicha\PedidoFicha.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PedidoFicha\PedidoFicha.wsdl" />
+    <None Include="Web References\PedidoFicha\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ProductoCaracteristicas\ProductoCaracteristica.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProductoCaracteristicas\ProductoCaracteristica.wsdl" />
+    <None Include="Web References\ProductoCaracteristicas\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ProductoFicha\ProductoFicha.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProductoFicha\ProductoFicha.wsdl" />
+    <None Include="Web References\ProductoFicha\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ProductoImagen\ProductoImagen.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProductoImagen\ProductoImagen.wsdl" />
+    <None Include="Web References\ProductoImagen\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ProductoLista\ProductoLista.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProductoLista\ProductoLista.wsdl" />
+    <None Include="Web References\ProductoLista\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ProductoTraduccion\ProductoTraduccion.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProductoTraduccion\ProductoTraduccion.wsdl" />
+    <None Include="Web References\ProductoTraduccion\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Objects\Objects.csproj">
+      <Project>{d2306b82-775c-4458-9413-cc72295a39dc}</Project>
+      <Name>Objects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

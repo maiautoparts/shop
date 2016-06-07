@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Sincronización.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Sincronización_ProductoLista_ProductoLista_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.1.202:7047/InstanceName/WS/MAI%20AUTOPARTS%252C%20S.L./Page/ProductoLista</Value>
+    </Setting>
+    <Setting Name="Sincronización_ClienteLista_ClienteLista_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.1.202:7047/InstanceName/WS/MAI%20AUTOPARTS%252C%20S.L./Page/ClienteLista</Value>
+    </Setting>
+    <Setting Name="Sincronización_ClienteGrupoPrecios_ClienteGrupoPrecios_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.1.202:7047/InstanceName/WS/MAI%20AUTOPARTS%252C%20S.L./Page/ClienteGrupoPrecios</Value>
+    </Setting>
+    <Setting Name="Sincronización_ProductoFicha_ProductoFicha_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.1.202:7047/InstanceName/WS/MAI%20AUTOPARTS%252C%20S.L./Page/ProductoFicha</Value>
+    </Setting>
+    <Setting Name="Sincronización_ProductoImagen_ProductoImagen_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.1.202:7047/InstanceName/WS/MAI%20AUTOPARTS%252C%20S.L./Page/ProductoImagen</Value>
+    </Setting>
+    <Setting Name="Sincronización_ProductoTraduccion_ProductoTraduccion_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.1.202:7047/InstanceName/WS/MAI%20AUTOPARTS%252C%20S.L./Page/ProductoTraduccion</Value>
+    </Setting>
+    <Setting Name="Sincronización_PedidoFicha_PedidoFicha_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.1.202:7047/InstanceName/WS/MAI%20AUTOPARTS%252C%20S.L./Page/PedidoFicha</Value>
+    </Setting>
+    <Setting Name="Sincronización_FacturasLista_FacturasLista_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.1.202:7047/InstanceName/WS/MAI%20AUTOPARTS%252C%20S.L./Page/FacturasLista</Value>
+    </Setting>
+    <Setting Name="Sincronización_ProductoCaracteristicas_ProductoCaracteristica_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.1.202:7047/InstanceName/WS/MAI%20AUTOPARTS%252C%20S.L./Page/ProductoCaracteristica</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/page/facturaslista" targetNamespace="urn:microsoft-dynamics-schemas/page/facturaslista" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/page/facturaslista" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:simpleType name="Document_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="_blank_" />
+          <xsd:enumeration value="Payment" />
+          <xsd:enumeration value="Invoice" />
+          <xsd:enumeration value="Credit_Memo" />
+          <xsd:enumeration value="Finance_Charge_Memo" />
+          <xsd:enumeration value="Reminder" />
+          <xsd:enumeration value="Refund" />
+          <xsd:enumeration value="Bill" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Document_Situation">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="_blank_" />
+          <xsd:enumeration value="Posted_BG_PO" />
+          <xsd:enumeration value="Closed_BG_PO" />
+          <xsd:enumeration value="BG_PO" />
+          <xsd:enumeration value="Cartera" />
+          <xsd:enumeration value="Closed_Documents" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Document_Status">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="_blank_" />
+          <xsd:enumeration value="Open" />
+          <xsd:enumeration value="Honored" />
+          <xsd:enumeration value="Rejected" />
+          <xsd:enumeration value="Redrawn" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Bal_Account_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="G_L_Account" />
+          <xsd:enumeration value="Customer" />
+          <xsd:enumeration value="Vendor" />
+          <xsd:enumeration value="Bank_Account" />
+          <xsd:enumeration value="Fixed_Asset" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="FacturasLista">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="Key" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Posting_Date" type="xsd:date" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Document_Type" type="tns:Document_Type" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Document_No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Bill_No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Document_Situation" type="tns:Document_Situation" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Document_Status" type="tns:Document_Status" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Customer_No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Message_to_Recipient" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Description" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Global_Dimension_1_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Global_Dimension_2_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="IC_Partner_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Salesperson_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Currency_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Original_Amount" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Original_Amt_LCY" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Amount" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Amount_LCY" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Remaining_Amount" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Remaining_Amt_LCY" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Bal_Account_Type" type="tns:Bal_Account_Type" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Bal_Account_No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Due_Date" type="xsd:date" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Pmt_Discount_Date" type="xsd:date" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Pmt_Disc_Tolerance_Date" type="xsd:date" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Original_Pmt_Disc_Possible" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Remaining_Pmt_Disc_Possible" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Max_Payment_Tolerance" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Pmt_Disc_Given_LCY" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Payment_Method_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Cod_banco_prevision_cobro" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Open" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="On_Hold" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="User_ID" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Source_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Reason_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Reversed" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Reversed_by_Entry_No" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Reversed_Entry_No" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Entry_No" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Exported_to_Payment_File" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Direct_Debit_Mandate_ID" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Transaction_No" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FacturasLista_List">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="unbounded" name="FacturasLista" type="tns:FacturasLista" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="FacturasLista_Fields">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="Posting_Date" />
+          <xsd:enumeration value="Document_Type" />
+          <xsd:enumeration value="Document_No" />
+          <xsd:enumeration value="Bill_No" />
+          <xsd:enumeration value="Document_Situation" />
+          <xsd:enumeration value="Document_Status" />
+          <xsd:enumeration value="Customer_No" />
+          <xsd:enumeration value="Message_to_Recipient" />
+          <xsd:enumeration value="Description" />
+          <xsd:enumeration value="Global_Dimension_1_Code" />
+          <xsd:enumeration value="Global_Dimension_2_Code" />
+          <xsd:enumeration value="IC_Partner_Code" />
+          <xsd:enumeration value="Salesperson_Code" />
+          <xsd:enumeration value="Currency_Code" />
+          <xsd:enumeration value="Original_Amount" />
+          <xsd:enumeration value="Original_Amt_LCY" />
+          <xsd:enumeration value="Amount" />
+          <xsd:enumeration value="Amount_LCY" />
+          <xsd:enumeration value="Remaining_Amount" />
+          <xsd:enumeration value="Remaining_Amt_LCY" />
+          <xsd:enumeration value="Bal_Account_Type" />
+          <xsd:enumeration value="Bal_Account_No" />
+          <xsd:enumeration value="Due_Date" />
+          <xsd:enumeration value="Pmt_Discount_Date" />
+          <xsd:enumeration value="Pmt_Disc_Tolerance_Date" />
+          <xsd:enumeration value="Original_Pmt_Disc_Possible" />
+          <xsd:enumeration value="Remaining_Pmt_Disc_Possible" />
+          <xsd:enumeration value="Max_Payment_Tolerance" />
+          <xsd:enumeration value="Pmt_Disc_Given_LCY" />
+          <xsd:enumeration value="Payment_Method_Code" />
+          <xsd:enumeration value="Cod_banco_prevision_cobro" />
+          <xsd:enumeration value="Open" />
+          <xsd:enumeration value="On_Hold" />
+          <xsd:enumeration value="User_ID" />
+          <xsd:enumeration value="Source_Code" />
+          <xsd:enumeration value="Reason_Code" />
+          <xsd:enumeration value="Reversed" />
+          <xsd:enumeration value="Reversed_by_Entry_No" />
+          <xsd:enumeration value="Reversed_Entry_No" />
+          <xsd:enumeration value="Entry_No" />
+          <xsd:enumeration value="Exported_to_Payment_File" />
+          <xsd:enumeration value="Direct_Debit_Mandate_ID" />
+          <xsd:enumeration value="Transaction_No" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="FacturasLista_Filter">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="Field" type="tns:FacturasLista_Fields" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="Criteria" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Read">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Entry_No" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Read_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="FacturasLista" type="tns:FacturasLista" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadByRecId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="recId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadByRecId_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="FacturasLista" type="tns:FacturasLista" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadMultiple">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="filter" type="tns:FacturasLista_Filter" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="bookmarkKey" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="setSize" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadMultiple_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="ReadMultiple_Result" type="tns:FacturasLista_List" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="IsUpdated">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Key" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="IsUpdated_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="IsUpdated_Result" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetRecIdFromKey">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Key" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetRecIdFromKey_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="GetRecIdFromKey_Result" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Update">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="FacturasLista" type="tns:FacturasLista" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Update_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="FacturasLista" type="tns:FacturasLista" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateMultiple">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="FacturasLista_List" type="tns:FacturasLista_List" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateMultiple_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="FacturasLista_List" type="tns:FacturasLista_List" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <message name="Read">
+    <part name="parameters" element="tns:Read" />
+  </message>
+  <message name="Read_Result">
+    <part name="parameters" element="tns:Read_Result" />
+  </message>
+  <message name="ReadByRecId">
+    <part name="parameters" element="tns:ReadByRecId" />
+  </message>
+  <message name="ReadByRecId_Result">
+    <part name="parameters" element="tns:ReadByRecId_Result" />
+  </message>
+  <message name="ReadMultiple">
+    <part name="parameters" element="tns:ReadMultiple" />
+  </message>
+  <message name="ReadMultiple_Result">
+    <part name="parameters" element="tns:ReadMultiple_Result" />
+  </message>
+  <message name="IsUpdated">
+    <part name="parameters" element="tns:IsUpdated" />
+  </message>
+  <message name="IsUpdated_Result">
+    <part name="parameters" element="tns:IsUpdated_Result" />
+  </message>
+  <message name="GetRecIdFromKey">
+    <part name="parameters" element="tns:GetRecIdFromKey" />
+  </message>
+  <message name="GetRecIdFromKey_Result">
+    <part name="parameters" element="tns:GetRecIdFromKey_Result" />
+  </message>
+  <message name="Update">
+    <part name="parameters" element="tns:Update" />
+  </message>
+  <message name="Update_Result">
+    <part name="parameters" element="tns:Update_Result" />
+  </message>
+  <message name="UpdateMultiple">
+    <part name="parameters" element="tns:UpdateMultiple" />
+  </message>
+  <message name="UpdateMultiple_Result">
+    <part name="parameters" element="tns:UpdateMultiple_Result" />
+  </message>
+  <portType name="FacturasLista_Port">
+    <operation name="Read">
+      <input name="Read" message="tns:Read" />
+      <output name="Read_Result" message="tns:Read_Result" />
+    </operation>
+    <operation name="ReadByRecId">
+      <input name="ReadByRecId" message="tns:ReadByRecId" />
+      <output name="ReadByRecId_Result" message="tns:ReadByRecId_Result" />
+    </operation>
+    <operation name="ReadMultiple">
+      <input name="ReadMultiple" message="tns:ReadMultiple" />
+      <output name="ReadMultiple_Result" message="tns:ReadMultiple_Result" />
+    </operation>
+    <operation name="IsUpdated">
+      <input name="IsUpdated" message="tns:IsUpdated" />
+      <output name="IsUpdated_Result" message="tns:IsUpdated_Result" />
+    </operation>
+    <operation name="GetRecIdFromKey">
+      <input name="GetRecIdFromKey" message="tns:GetRecIdFromKey" />
+      <output name="GetRecIdFromKey_Result" message="tns:GetRecIdFromKey_Result" />
+    </operation>
+    <operation name="Update">
+      <input name="Update" message="tns:Update" />
+      <output name="Update_Result" message="tns:Update_Result" />
+    </operation>
+    <operation name="UpdateMultiple">
+      <input name="UpdateMultiple" message="tns:UpdateMultiple" />
+      <output name="UpdateMultiple_Result" message="tns:UpdateMultiple_Result" />
+    </operation>
+  </portType>
+  <binding name="FacturasLista_Binding" type="tns:FacturasLista_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="Read">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/facturaslista:Read" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Read">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Read_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ReadByRecId">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/facturaslista:ReadByRecId" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ReadByRecId">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ReadByRecId_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ReadMultiple">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/facturaslista:ReadMultiple" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ReadMultiple">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ReadMultiple_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="IsUpdated">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/facturaslista:IsUpdated" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="IsUpdated">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="IsUpdated_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetRecIdFromKey">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/facturaslista:GetRecIdFromKey" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetRecIdFromKey">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetRecIdFromKey_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Update">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/facturaslista:Update" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Update">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Update_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="UpdateMultiple">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/facturaslista:UpdateMultiple" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="UpdateMultiple">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="UpdateMultiple_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="FacturasLista_Service">
+    <port name="FacturasLista_Port" binding="tns:FacturasLista_Binding">
+      <address location="http://192.168.1.202:7047/InstanceName/WS/MAI%20AUTOPARTS%252C%20S.L./Page/FacturasLista" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>
