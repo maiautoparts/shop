@@ -54,6 +54,7 @@ namespace Sincronización
         {
             if (productos == null)
             {
+                string test = "HOLA";
                 productos = new List<Producto>();
                 connection = new OleDbConnection(GetConnectionString());
 
