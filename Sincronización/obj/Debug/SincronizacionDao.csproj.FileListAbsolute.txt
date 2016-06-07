@@ -14,3 +14,11 @@ D:\projects\Sincronización\Sincronización\bin\Debug\Objects.pdb
 D:\projects\Sincronización\Sincronización\obj\Debug\SincronizacionDao.csprojResolveAssemblyReference.cache
 D:\projects\Sincronización\Sincronización\obj\Debug\Sincronización.dll
 D:\projects\Sincronización\Sincronización\obj\Debug\Sincronización.pdb
+D:\projects\MAI\Sincronizacion\Sincronización\bin\Debug\Sincronización.dll.config
+D:\projects\MAI\Sincronizacion\Sincronización\bin\Debug\Sincronización.dll
+D:\projects\MAI\Sincronizacion\Sincronización\bin\Debug\Sincronización.pdb
+D:\projects\MAI\Sincronizacion\Sincronización\bin\Debug\Objects.dll
+D:\projects\MAI\Sincronizacion\Sincronización\bin\Debug\Objects.pdb
+D:\projects\MAI\Sincronizacion\Sincronización\obj\Debug\SincronizacionDao.csprojResolveAssemblyReference.cache
+D:\projects\MAI\Sincronizacion\Sincronización\obj\Debug\Sincronización.dll
+D:\projects\MAI\Sincronizacion\Sincronización\obj\Debug\Sincronización.pdb

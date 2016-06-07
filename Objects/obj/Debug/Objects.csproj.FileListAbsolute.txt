@@ -6,3 +6,7 @@ D:\projects\Sincronización\Objects\bin\Debug\Objects.dll
 D:\projects\Sincronización\Objects\bin\Debug\Objects.pdb
 D:\projects\Sincronización\Objects\obj\Debug\Objects.dll
 D:\projects\Sincronización\Objects\obj\Debug\Objects.pdb
+D:\projects\MAI\Sincronizacion\Objects\bin\Debug\Objects.dll
+D:\projects\MAI\Sincronizacion\Objects\bin\Debug\Objects.pdb
+D:\projects\MAI\Sincronizacion\Objects\obj\Debug\Objects.dll
+D:\projects\MAI\Sincronizacion\Objects\obj\Debug\Objects.pdb

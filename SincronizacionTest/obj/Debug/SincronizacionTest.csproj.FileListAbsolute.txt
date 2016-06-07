@@ -18,3 +18,14 @@ D:\projects\Sincronización\SincronizacionTest\obj\Debug\SincronizacionTest.dll
 D:\projects\Sincronización\SincronizacionTest\obj\Debug\SincronizacionTest.pdb
 D:\projects\Sincronización\SincronizacionTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 D:\projects\Sincronización\SincronizacionTest\bin\Debug\es\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\projects\MAI\Sincronizacion\SincronizacionTest\bin\Debug\SincronizacionTest.dll
+D:\projects\MAI\Sincronizacion\SincronizacionTest\bin\Debug\SincronizacionTest.pdb
+D:\projects\MAI\Sincronizacion\SincronizacionTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\projects\MAI\Sincronizacion\SincronizacionTest\bin\Debug\Sincronización.dll
+D:\projects\MAI\Sincronizacion\SincronizacionTest\bin\Debug\Objects.dll
+D:\projects\MAI\Sincronizacion\SincronizacionTest\bin\Debug\Sincronización.pdb
+D:\projects\MAI\Sincronizacion\SincronizacionTest\bin\Debug\Objects.pdb
+D:\projects\MAI\Sincronizacion\SincronizacionTest\bin\Debug\es\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\projects\MAI\Sincronizacion\SincronizacionTest\obj\Debug\SincronizacionTest.csprojResolveAssemblyReference.cache
+D:\projects\MAI\Sincronizacion\SincronizacionTest\obj\Debug\SincronizacionTest.dll
+D:\projects\MAI\Sincronizacion\SincronizacionTest\obj\Debug\SincronizacionTest.pdb
