@@ -227,6 +227,7 @@ namespace Sincronización
 
         private void EliminarProducto(string referencia)
         {
+            //Elimina el producto
             using (OleDbCommand command = new OleDbCommand())
             {
                 StringBuilder query = new StringBuilder();
