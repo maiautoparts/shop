@@ -3,4 +3,9 @@
 ################################################################################
 
 /Sincronización/Base.cs
-Debug
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
