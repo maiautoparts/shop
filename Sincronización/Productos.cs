@@ -13,7 +13,6 @@ namespace Sincronización
     public class Productos : Base
     {
         private string connectionString = GetConnectionString();
-        private string pruebaString = "adios";
         private ProductoLista.ProductoLista_Service servLista;
         private ProductoFicha.ProductoFicha_Service servFicha;
         private ProductoImagen.ProductoImagen_Service servImagen;
