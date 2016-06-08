@@ -13,7 +13,6 @@ namespace Sincronización
     public class Productos : Base
     {
         private string connectionString = GetConnectionString();
-        private string pruebaString = "adios";
         private ProductoLista.ProductoLista_Service servLista;
         private ProductoFicha.ProductoFicha_Service servFicha;
         private ProductoImagen.ProductoImagen_Service servImagen;
@@ -70,7 +69,7 @@ namespace Sincronización
                 //filter2.Criteria = "=04AM";
                 //filters.Add(filter2);
 
-                ProductoLista.ProductoLista[] productoLista = servLista.ReadMultiple(filters.ToArray(), null, 0);
+                ProductoLista.ProductoLista[] productoLista = servLista.ReadMultiple(filters.ToArray(), null, 10);
                 connection.Open();
                 foreach (var product in productoLista)
                 {
