@@ -218,6 +218,7 @@ namespace Sincronización
 
         private bool ExisteNav(string referencia)
         {
+            //comprueba si existe en navision
             bool existe = false;
             ProductoLista.ProductoLista producto = servLista.Read(referencia);
             if (producto != null)
