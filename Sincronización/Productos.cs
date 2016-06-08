@@ -69,7 +69,7 @@ namespace Sincronización
                 //filter2.Criteria = "=04AM";
                 //filters.Add(filter2);
 
-                ProductoLista.ProductoLista[] productoLista = servLista.ReadMultiple(filters.ToArray(), null, 10);
+                ProductoLista.ProductoLista[] productoLista = servLista.ReadMultiple(filters.ToArray(), null, 20);
                 connection.Open();
                 foreach (var product in productoLista)
                 {
