@@ -55,7 +55,6 @@ namespace Sincronización
         {
             if (productos == null)
             {
-                string test = "HOLA";
                 productos = new List<Producto>();
                 connection = new OleDbConnection(GetConnectionString());
 
@@ -509,7 +508,7 @@ namespace Sincronización
                     }
                 }
             }
-            catch (Exception e)
+            catch (Exception e) 
             {
                 correcto = false;
             }
