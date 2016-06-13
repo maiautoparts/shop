@@ -109,9 +109,10 @@ namespace Sincronización
             return productos;
         }
 
-        private List<ProductoCaracteristicas.ProductoCaracteristica> GetTextos(string referencia)
+        private List<ProductoTexto> GetTextos(string referencia)
         {
-            List<ProductoCaracteristicas.ProductoCaracteristica> textos = new List<ProductoCaracteristicas.ProductoCaracteristica>();
+            List<ProductoCaracteristicas.ProductoCaracteristica> textosNav = new List<ProductoCaracteristicas.ProductoCaracteristica>();
+            List<ProductoTexto> textos = new List<ProductoTexto>();
 
             List<ProductoCaracteristicas.ProductoCaracteristica_Filter> filtros = new List<ProductoCaracteristicas.ProductoCaracteristica_Filter>();
             ProductoCaracteristicas.ProductoCaracteristica_Filter filtro1 = new ProductoCaracteristicas.ProductoCaracteristica_Filter();
@@ -120,8 +121,20 @@ namespace Sincronización
             filtro1.Criteria = "=" + referencia;
             filtros.Add(filtro1);
 
-            textos = servTextos.ReadMultiple(filtros.ToArray(), null, 0).ToList();
+            textosNav = servTextos.ReadMultiple(filtros.ToArray(), null, 0).ToList();
+            foreach (ProductoCaracteristicas.ProductoCaracteristica  textoNav in textosNav)
+            {
+                ProductoTexto texto = new ProductoTexto();
+                texto.Referencia = textoNav.Nº_producto;
+                texto.Idioma = textoNav.Cód_Idioma == null ? "ESP" : textoNav.Cód_Idioma; //si es null, pongo esp
+                texto.Linea = textoNav.Nº_línea;
+                texto.LineaCatalogo = textoNav.Nº_línea_catálogo;
+                texto.Texto = textoNav.Texto;
+                texto.TipoCaracteristica = (int)textoNav.Tipo_característica;
+                texto.CodigoCaracteristica = textoNav.Cód_característica;
 
+                textos.Add(texto);
+            }
             return textos;
         }
 
@@ -470,7 +483,7 @@ namespace Sincronización
                         if (producto.ActualizarTextos)
                         {
                             // GET TEXTOS
-                            List<ProductoCaracteristicas.ProductoCaracteristica> textos = GetTextos(producto.Referencia);
+                            List<ProductoTexto> textos = GetTextos(producto.Referencia);
 
 
 
@@ -492,7 +505,7 @@ namespace Sincronización
 
 
                             //insert everything
-                            foreach (ProductoCaracteristicas.ProductoCaracteristica texto in textos)
+                            foreach (ProductoTexto texto in textos)
                             {
                                 using (OleDbCommand command = new OleDbCommand())
                                 {

@@ -11,7 +11,7 @@ namespace SincronizacionTest
         public void TextosTest()
         {
             Productos productos = new Productos();
-            productos.ActualizarProductos();
+            productos.ActualizarTextos();
         }
 
         [TestMethod]
