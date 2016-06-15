@@ -92,10 +92,10 @@ namespace Sincronización
             }
             catch (Exception ex)
             {
-                FileStream file = File.Open(@"F:\Software\Sincronizacion\logs.txt", FileMode.OpenOrCreate);
+                FileStream file = File.Open(@"\\192.168.1.202\Software\Sincronizacion\logs.txt", FileMode.OpenOrCreate);
                 file.Close();
 
-                File.WriteAllText(@"F:\Software\Sincronizacion\logs.txt", ex.Message);
+                File.WriteAllText(@"\\192.168.1.202\Software\Sincronizacion\logs.txt", ex.Message);
                 correcto = false;
             }
 

@@ -52,12 +52,17 @@ namespace Sincronización
 
         private List<Producto> GetProductos()
         {
+            List<ProductoLista.ProductoLista_Filter> filters = new List<ProductoLista.ProductoLista_Filter>();
+            return GetProductos(filters);
+        }
+
+        private List<Producto> GetProductos(List<ProductoLista.ProductoLista_Filter> filters)
+        {
             if (productos == null)
             {
                 productos = new List<Producto>();
                 connection = new OleDbConnection(GetConnectionString());
-
-                List<ProductoLista.ProductoLista_Filter> filters = new List<ProductoLista.ProductoLista_Filter>();
+                
                 ProductoLista.ProductoLista_Filter filter = new ProductoLista.ProductoLista_Filter();
                 filter.Field = ProductoLista.ProductoLista_Fields.Producto_web;
                 filter.Criteria = "=true";
@@ -122,7 +127,7 @@ namespace Sincronización
             filtros.Add(filtro1);
 
             textosNav = servTextos.ReadMultiple(filtros.ToArray(), null, 0).ToList();
-            foreach (ProductoCaracteristicas.ProductoCaracteristica  textoNav in textosNav)
+            foreach (ProductoCaracteristicas.ProductoCaracteristica textoNav in textosNav)
             {
                 ProductoTexto texto = new ProductoTexto();
                 texto.Referencia = textoNav.Nº_producto;
@@ -473,6 +478,8 @@ namespace Sincronización
 
             try
             {
+                //TODO: mejor si únicamente cogemos los productos que tengan marcado "Actualizar texto", pero eso
+                //está en productoficha. Habría que ponerlo ahí y vincularlo al original.
                 this.productos = this.GetProductos();
 
                 using (OleDbConnection connection = new OleDbConnection(connectionString))
@@ -486,43 +493,43 @@ namespace Sincronización
                             List<ProductoTexto> textos = GetTextos(producto.Referencia);
 
 
-
-                            //delete everything
-                            using (OleDbCommand command = new OleDbCommand())
+                            if (textos.Count != 0)
                             {
-                                StringBuilder query = new StringBuilder();
-                                query.Append("DELETE FROM ProductoOrdenCaracteristicas ");
-                                query.Append("WHERE NumProduct = @referencia; ");
-                                query.Append("DELETE FROM ProductoTextoCaracteristicas ");
-                                query.Append("WHERE NumProduct = @referencia");
-
-                                command.CommandText = query.ToString();
-                                command.Parameters.Add(new OleDbParameter("@referencia", producto.Referencia));
-
-                                command.ExecuteNonQuery();
-                            }
-
-
-
-                            //insert everything
-                            foreach (ProductoTexto texto in textos)
-                            {
+                                //delete everything
                                 using (OleDbCommand command = new OleDbCommand())
                                 {
                                     StringBuilder query = new StringBuilder();
-                                    //TODO: Tablas "ProductoOrdenCaracteristicas" y "ProductoTextoCaracteristicas"
+                                    query.Append("DELETE FROM ProductoOrdenCaracteristicas ");
+                                    query.Append("WHERE NumProduct = @referencia; ");
+                                    query.Append("DELETE FROM ProductoTextoCaracteristicas ");
+                                    query.Append("WHERE NumProduct = @referencia");
 
                                     command.CommandText = query.ToString();
                                     command.Parameters.Add(new OleDbParameter("@referencia", producto.Referencia));
 
                                     command.ExecuteNonQuery();
                                 }
+                                
+                                //insert everything
+                                foreach (ProductoTexto texto in textos)
+                                {
+                                    using (OleDbCommand command = new OleDbCommand())
+                                    {
+                                        StringBuilder query = new StringBuilder();
+                                        //TODO: Tablas "ProductoOrdenCaracteristicas" y "ProductoTextoCaracteristicas"
+
+                                        command.CommandText = query.ToString();
+                                        command.Parameters.Add(new OleDbParameter("@referencia", producto.Referencia));
+
+                                        command.ExecuteNonQuery();
+                                    }
+                                }
                             }
                         }
                     }
                 }
             }
-            catch (Exception e) 
+            catch (Exception e)
             {
                 correcto = false;
             }
